@@ -1,0 +1,28 @@
+classDiagram
+    class Customer {
+        +String name
+        +List~Transaction~ purchaseHistory
+    }
+
+    class FoodItem {
+        +String name
+        +String category
+        +Decimal price
+        +Number popularityRating
+    }
+
+    class ItemCollection {
+        +List~FoodItem~ items
+        +filterByCategory(category) List~FoodItem~
+    }
+
+    class Transaction {
+        +List~FoodItem~ items
+        +Decimal totalCost
+        +calculateTotal() Decimal
+    }
+
+    Customer "1" --> "0..*" Transaction : purchase history
+    Customer --> ItemCollection : browses
+    ItemCollection "1" o-- "0..*" FoodItem : contains
+    Transaction "0..*" --> "1..*" FoodItem : includes

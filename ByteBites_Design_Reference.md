@@ -12,3 +12,5 @@ in the spec.
 <!-- Write a short set of instructions guiding how your AI assistant should behave 
 when helping with this project — for example, which classes to stay within, 
 what complexity to avoid, or any preferences for how suggestions are structured. -->
+i would like for th e classes to be simple and keep things necessary and logical 
+the classes should be login, order food, get menu, track past orders, track order 
