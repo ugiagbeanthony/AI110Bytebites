@@ -50,7 +50,8 @@ database, payment processing, or features beyond this specification.
   calculated totals.
 - Filtering should return matching items without unexpectedly changing the
   collection.
-- Treat `Transaction.calculate_total()` as a calculation over its items rather
-  than separately stored total state.
+- Treat `Transaction.calculate_total()` as a calculation over each purchase which shows the receipt on screen right after
 - Do not infer authentication, persistence, payment, or other behavior from the
   purchase-history requirement.
+  but there should be authentication upon login and this should be a part of the customer module the creation of an account should make a file with a username and password that file itself should be locked or smth so that ppl cant change what is inside it should be more like a private file private to the system, validate the username to only have letters, underscores and numbers be 9 char long and the password 16-chars long must not have username in it must have uppercase, lowercase, special char like only either of these but only within this list [',', '.', '@', '*',] and it must be stated under the password which char are acceptable and make the payment being a part of transaction to verify the card number check whether 0 < month < 13 and the cvv must be three digits 
+  when there comes an input error tell the user about the error
